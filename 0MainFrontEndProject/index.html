@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Da'Database | Home</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+
+        body {
+            padding-top: 50px;
+            padding-bottom: 40px;
+            color: #5a5a5a;
+        }
+
+        /* 轮播展示 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 60px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+            height:100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+        /* 买家卖家入口 */
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .img-circle{
+            width:100%;
+            height:100%;
+        }
+		
+		#barcode{
+            width:0px;
+            height:0px;
+
+     /* 教材目录 */
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+	margin-top: 5px;
+	color: #4357FA;
+            }
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Da'Database</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#ad-carousel">Home</a></li>
+                <li><a href="#summary-container">Order Now</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Textbooks<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#feature-tab" data-tab="tab-chrome">Electrical and Computer Engineering</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-firefox">Chemical Engineering</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-lalala">Material Science and Engineering</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-safari">Mechanical and Industrial Engineering</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-opera">Civil Engineering</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-hahaha">Mineral Engineering</a></li>
+                        <li><a href="#feature-tab" data-tab="tab-ie">Engineering Science</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" data-toggle="modal" data-target="#about-modal">About Us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 展示轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/together.JPG" alt="1 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Engineering Science</h1>
+                    <p>Please scan the QR code below to get started!</p>
+                    <p><img id="barcode" src="" alt=""/> </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/02.jpg" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Chemical/Material Engineering</h1>
+                    <p>Please scan the QR code below to get started!</p>
+                    <p><img id="barcode" src="" alt=""/> </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/04.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Mechanical/Industrial Engineering</h1>
+                    <p>Please scan the QR code below to get started!</p>
+                    <p><img id="barcode" src="" alt=""/> </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/10.jpg" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Civil/Mineral Engineering</h1>
+                    <p>Please scan the QR code below to get started!</p>
+                    <p><img id="barcode" src="" alt=""/> </p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/12.jpg" alt="5 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Electrical/Computer Engineering</h1>
+                   <p>Please scan the QR code below to get started!</p>
+                    <p><img id="barcode" src="" alt=""/> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+
+
+<!-- 主要内容 -->
+<div class="container summary">
+
+    <!-- 买家卖家入口 -->
+    <div class="row" id="summary-container">
+        <div class="col-md-4">
+            <img class="img-circle" src="images/sell.jpg" alt="chrome">
+
+            <h2>I want to sell</h2>
+
+            <p>For upper year engineering students who have used textbooks!</p>
+
+            <p><a class="btn btn-default" href="http://app.askform.cn/2243450001.aspx" role="button">Click Here</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/buy.jpg" alt="firefox">
+
+            <h2>I want to buy</h2>
+
+            <p>For newly admitted first year students who need recycled textbooks!</p>
+
+            <p><a class="btn btn-default" href="http://app.askform.cn/6c8d5e3a-b724-44eb-9420-13275175871a.aspx?Type=2" role="button">Click Here</a></p>
+        </div>
+        <div class="col-md-4">
+            <img class="img-circle" src="images/804.jpg" alt="safari">
+
+            <h2>FAQ</h2>
+
+            <p>Don't know how it works? You can find answers here!</p>
+
+            <p><a class="btn btn-default" href="javascript:alert('然而我并不知道有什么可以写的')" role="button">Click Here</a></p>
+        </div>
+    </div>
+
+    <!-- 教材目录 -->
+
+    <hr class="feature-divider">
+
+    <ul class="nav nav-tabs" role="tablist" id="feature-tab">
+        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">Electrical/Computer</a></li>
+        <li><a href="#tab-firefox" role="tab" data-toggle="tab">Chemical</a></li>
+        <li><a href="#tab-lalala" role="tab" data-toggle="tab">Material</a></li>
+        <li><a href="#tab-safari" role="tab" data-toggle="tab">Mechanical/Industrial</a></li>
+        <li><a href="#tab-opera" role="tab" data-toggle="tab">Civil</a></li>
+        <li><a href="#tab-hahaha" role="tab" data-toggle="tab">Mineral</a></li>
+        <li><a href="#tab-ie" role="tab" data-toggle="tab">Engineering Science</a></li>
+    </ul>
+
+    <div class="tab-content">
+        
+        <div class="tab-pane active" id="tab-chrome">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h1 class="feature-heading">Electrical and Computer Engineering</h1>
+                    <p class="lead">Courses and Textbooks (Same as TrackOne)</p>
+                    <table class="table table-condensed table-striped table-bordered table-hover">
+   <tr>
+     <th>Course Code</th>
+     <th>Textbook Title</th>
+   </tr>
+   <tr>
+     <td>MAT186Fall</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>MAT188Fall</td>
+     <td>Linear Algebra With Applications</td>
+   </tr>
+   <tr>
+     <td>APS111Fall</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>APS105Fall</td>
+     <td>An Introduction to Computer Science Using C</td>
+   </tr>
+   <tr>
+     <td>CIV100Fall</td>
+     <td>Engineering Mechanics Statics</td>
+   </tr>
+   <tr>
+     <td>MAT187Winter</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>APS112Winter</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>MIE100Winter</td>
+     <td>Engineering Mechanics Dynamics</td>
+   </tr>
+   <tr>
+     <td>APS104Winter</td>
+     <td>Introduction to Thermodynamics&amp;Introduction to Material Science and Engineering</td>
+   </tr>
+   <tr>
+     <td>ECE110Winter</td>
+     <td>Electrical Foundamentals</td>
+   </tr>
+   </table>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/Dept-Electrical-Computer.jpg"
+                         alt="Chrome">
+                </div>
+            </div>
+        </div>
+             
+        <div class="tab-pane" id="tab-firefox">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h1 class="feature-heading">Chemical Engineering</h1>
+                    <p class="lead">Courses and Textbooks</p>
+                    <table class="table table-condensed table-striped table-bordered table-hover">
+   <tr>
+     <th>Course Code</th>
+     <th>Textbook Title</th>
+   </tr>
+   <tr>
+     <td>MAT186Fall</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>MAT188Fall</td>
+     <td>Linear Algebra With Applications</td>
+   </tr>
+   <tr>
+     <td>APS111Fall</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>CHE112Fall</td>
+     <td>Physical Chemistry for Engineer&amp;Applied Science</td>
+   </tr>
+   <tr>
+     <td>CIV100Fall</td>
+     <td>Engineering Mechanics Statics</td>
+   </tr>
+   <tr>
+     <td>MAT187Winter</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>APS112Winter</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>CHE113Winter</td>
+     <td>Fundamental of Physics </td>
+   </tr>
+   <tr>
+     <td>MSE101Winter</td>
+     <td>Fundamentals of Materials Science and Engineering </td>
+   </tr>
+   <tr>
+     <td>APS106Winter</td>
+     <td>C Programming - A Modern Approach</td>
+   </tr>
+   </table>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/Dept-ChemE.jpg"
+                         alt="Firefox">
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane" id="tab-lalala">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h1 class="feature-heading">Material Science and Engineering</h1>
+                    <p class="lead">Courses and Textbooks</p>
+                   <table class="table table-condensed table-striped table-bordered table-hover">
+   <tr>
+     <th>Course Code</th>
+     <th>Textbook Title</th>
+   </tr>
+   <tr>
+     <td>MAT186Fall</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>MAT188Fall</td>
+     <td>Linear Algebra With Applications</td>
+   </tr>
+   <tr>
+     <td>APS111Fall</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>MSE101Fall</td>
+     <td>Fundamentals of Materials Science and Engineering</td>
+   </tr>
+   <tr>
+     <td>CIV100Fall</td>
+     <td>Engineering Mechanics Statics</td>
+   </tr>
+   <tr>
+     <td>MAT187Winter</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>APS112Winter</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>CHE112Winter</td>
+     <td>Physical Chemistry for Engineer</td>
+   </tr>
+   <tr>
+     <td>ECE110Winter</td>
+     <td>Electrical Foundamentals</td>
+   </tr>
+   <tr>
+     <td>APS106Winter</td>
+     <td>C Programming - A Modern Approach</td>
+   </tr>
+   </table>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/Dept-material.jpg"
+                         alt="Firefox">
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane" id="tab-safari">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h1 class="feature-heading">Mechanical and Industrial Engineering</h1>
+                    <p class="lead">Courses and Textbooks</p>
+                                       <table class="table table-condensed table-striped table-bordered table-hover">
+   <tr>
+     <th>Course Code</th>
+     <th>Textbook Title</th>
+   </tr>
+   <tr>
+     <td>MAT186Fall</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>MAT188Fall</td>
+     <td>Linear Algebra With Applications</td>
+   </tr>
+   <tr>
+     <td>APS111Fall</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>MSE101Fall</td>
+     <td>Fundamentals of Materials Science and Engineering</td>
+   </tr>
+   <tr>
+     <td>CIV100Fall</td>
+     <td>Engineering Mechanics Statics</td>
+   </tr>
+   <tr>
+     <td>MAT187Winter</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>APS112Winter</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>MIE100Winter</td>
+     <td>Engineering Mechanics Dynamics</td>
+   </tr>
+   <tr>
+     <td>ECE110Winter</td>
+     <td>Electrical Foundamentals</td>
+   </tr>
+   <tr>
+     <td>APS106Winter</td>
+     <td>C Programming - A Modern Approach</td>
+   </tr>
+   </table>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/Dept-Mechanical.jpg"
+                         alt="Safari">
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane" id="tab-opera">
+            <div class="row feature">
+                <div class="col-md-7">
+                   <h1 class="feature-heading">Civil Engineering</h1>
+                   <p class="lead">Courses and Textbooks</p>
+                   <table class="table table-condensed table-striped table-bordered table-hover">
+   <tr>
+     <th>Course Code</th>
+     <th>Textbook Title</th>
+   </tr>
+   <tr>
+     <td>MAT186Fall</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>MAT188Fall</td>
+     <td>Linear Algebra With Applications</td>
+   </tr>
+   <tr>
+     <td>APS111Fall</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>CHE112Fall</td>
+     <td>Physical Chemistry for Engineer</td>
+   </tr>
+   <tr>
+     <td>CIV100Fall</td>
+     <td>Engineering Mechanics Statics</td>
+   </tr>
+   <tr>
+     <td>MAT187Winter</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>APS112Winter</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>CME185Winter</td>
+     <td>Geology For Engineers & Environmental Scientists </td>
+   </tr>
+   <tr>
+     <td>MSE101Winter</td>
+     <td>Fundamentals of Materials Science and Engineering </td>
+   </tr>
+   <tr>
+     <td>APS106Winter</td>
+     <td>C Programming - A Modern Approach</td>
+   </tr>
+   </table>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/Dept-Civil.jpg"
+                         alt="Opera">
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane" id="tab-hahaha">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h1 class="feature-heading">Mineral Engineering</h1>
+                    <p class="lead">Courses and Textbooks</p>
+                                       <table class="table table-condensed table-striped table-bordered table-hover">
+   <tr>
+     <th>Course Code</th>
+     <th>Textbook Title</th>
+   </tr>
+   <tr>
+     <td>MAT186Fall</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>MAT188Fall</td>
+     <td>Linear Algebra With Applications</td>
+   </tr>
+   <tr>
+     <td>APS111Fall</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>CHE112Fall</td>
+     <td>Physical Chemistry for Engineer</td>
+   </tr>
+   <tr>
+     <td>CIV100Fall</td>
+     <td>Engineering Mechanics Statics</td>
+   </tr>
+   <tr>
+     <td>MAT187Winter</td>
+     <td>Calculus for Scientists and Engineers Early Transcendentals</td>
+   </tr>
+   <tr>
+     <td>APS112Winter</td>
+     <td>The Human Factor</td>
+   </tr>
+   <tr>
+     <td>CME185Winter</td>
+     <td>Geology For Engineers & Environmental Scientists </td>
+   </tr>
+   <tr>
+     <td>MSE101Winter</td>
+     <td>Fundamentals of Materials Science and Engineering </td>
+   </tr>
+   <tr>
+     <td>APS106Winter</td>
+     <td>C Programming - A Modern Approach</td>
+   </tr>
+   </table>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/Dept-Mineral.jpg"
+                         alt="Opera">
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-pane" id="tab-ie">
+            <div class="row feature">
+                <div class="col-md-7">
+                    <h1 class="feature-heading">Engineering Science</h1>
+                    <p class="lead">Courses and Textbooks</p>
+                                       <table class="table table-condensed table-striped table-bordered table-hover">
+   <tr>
+     <th>Course Code</th>
+     <th>Textbook Title</th>
+   </tr>
+   <tr>
+     <td>PHY180Fall</td>
+     <td>Physics for Scientists and Engineers</td>
+   </tr>
+   <tr>
+     <td>MAT194Fall</td>
+     <td>Stewart Calculus</td>
+   </tr>
+   <tr>
+     <td>ESC103Fall</td>
+     <td>MATLAB</td>
+   </tr>
+   <tr>
+     <td>CSC180Fall</td>
+     <td>Online PDF's</td>
+   </tr>
+   <tr>
+     <td>CIV102Fall</td>
+     <td>Class Notes</td>
+   </tr>
+     <tr>
+     <td>ESC101Fall</td>
+     <td>Engineering Communication From Principles to Practice</td>
+   </tr>
+   <tr>
+     <td>ECE159Winter</td>
+     <td>The Analysis and Design of Linear Circuits</td>
+   </tr>
+   <tr>
+     <td>MAT195Winter</td>
+     <td>Stewart Calculus</td>
+   </tr>
+   <tr>
+     <td>MSE160Winter</td>
+     <td>Molecules and Materials</td>
+   </tr>
+   <tr>
+     <td>MAT185Winter</td>
+     <td>Selected Materials from Linear Algebra with Applications 6th Ed.</td> 
+   </tr>
+   <tr>
+     <td>CSC190Winter</td>
+     <td>C Programming: A Modern Approach & Data Structure, Algorithm and Software Principles in C</td>
+   </tr>
+   <tr>
+     <td>ESC102Winter</td>
+     <td>Engineering Communication From Principles to Practice</td> 
+   </tr>
+   </table>
+                </div>
+                <div class="col-md-5">
+                    <img class="feature-image img-responsive" src="images/Dept-ENgScience.jpg"
+                         alt="IE">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于 -->
+    <div class="modal fade" id="about-modal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+         aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">CLOSE</span></button>
+                    <h4 class="modal-title" id="modal-label">About Us</h4>
+                </div>
+                <div class="modal-body">
+                    <p>We are the Da'database Team<br/>
+                        Introduce the team blablabla<br/>
+                        Our goals:<br/>
+                        1.<br/>
+                        2.<br/>
+                        3.<br/>
+                        <h4>Contact Us：<br/></h4>
+                        <a target="_blank" href="http://">Junyi(Katherine) Sun</a><br/>   
+                        Email:  junyi.sun@mail.utoronto.ca<br/>
+                        </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Got it!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p class="pull-right"><a href="#top">Back to Top</a></p>
+
+        <p>&copy; 2015 Da'Database Team </p>
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>
